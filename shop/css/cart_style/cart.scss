@@ -1,0 +1,544 @@
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin container {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+@mixin header {
+    padding-top: 18px;
+    padding-bottom: 19px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 500%;
+	animation: gradient 5s ease infinite;
+    
+}
+@mixin flex-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@mixin text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+$headColor: #222222;
+$footColor: #222224;
+$textColor: #F16D7F;
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+} 
+body{
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+
+}
+/*---------header---------*/
+.header{
+    @include header();
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.container-header{
+    @include container();
+        &-nav{
+            @include flex();
+            
+        }
+}
+.container-header-nav-brand{
+    @include flex();
+        &-lk{
+            margin-left: 33px;
+        }
+        &-btn-burg{
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0s;
+            &:active{
+                transform: scale(1.1);
+            }
+        }
+}
+.overlay{
+    position: fixed;
+    width: 100%;
+    background-color: #2225;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    top: 78px;
+    display: none;
+    justify-content: flex-end;
+    z-index: 10;
+}
+/*.overlay-open{
+    display: flex;
+}*/ 
+#menu{
+    display: none;
+}
+#menu:checked ~ .overlay {
+    display: flex;
+  }
+#menu:not(:checked) ~ .overlay {
+    display: none;
+  }
+.overlay-nav{
+    background-color: white;
+    position: relative;
+    width: 380px;
+    padding: 38px 0px 0px 34px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    box-shadow: 0px 0px 61px 0px #ccc;
+        &-btn{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+                &-close{
+                    font-size: 32px;
+                    color: #6F6E6E;
+                    transition: 0.3s;
+                    &:hover{
+                        transform: rotate(360deg);
+                    }
+                }
+        }
+        &-gen{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #F16D7F;
+            margin-top: 31px;
+        }
+}
+.overlay-nav-ul{
+    margin-left: 21px;
+    list-style-type: none;
+    line-height: 25px;
+        &-lk{
+            text-decoration: none;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 2;
+            color: #6F6E6E;
+            &:hover{
+                color: #F16D7F;
+            }
+        }
+}
+/*-----------promo----------*/ 
+.promo{
+    background-color: #F8F3F4;
+    padding-top: 78px;
+    margin-bottom: 64px;
+}
+.promo-container{
+    @include container();
+    @include flex();
+    padding-top: 65px;
+    padding-bottom: 65px;
+        &-head{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            color: #F16D7F;
+        }
+}
+.promo-walk{
+    @include flex();
+        &-link{
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #636363;
+            margin-right: 5px;
+        }
+        &-link:last-child{
+            color: #F16D7F;
+            font-weight: 700;
+        }
+}
+/*---------item------------*/ 
+.item-container{
+    @include container();
+    @include flex-cont();
+
+}
+.cart{
+    width: 655px;
+    height: 700px;
+}
+.cart-goods{
+    width: 652px;
+    height: 306px;
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+    transition: 0.3s;
+    &:hover{
+        box-shadow: 1px 1px 14px 5px #ccc;
+        transform: scale(1.05);
+    }
+        &-img{
+            width: 262px;
+            height: 306px;
+        }
+        &-close{
+            position: absolute;
+            right: 28px;
+            top: 22px;
+            font-size: 25px;
+            transition: 0.3s;
+            cursor: pointer;
+            &:hover{
+                transform:rotate(360deg) scale(1.05) ;
+            }
+        }
+}
+.close{
+    border: none;
+}
+.info{
+    padding-left: 31px;
+        &-head{
+            padding: 22px 0px 45px 0px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            color: #222222;
+        }
+        &-text{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            color: #575757;
+            line-height: 1.6;
+        }
+        &-form{
+            display: flex;
+                &-input{
+                    width: 50px;
+                    height: 24px;
+                    margin: 5px 0px 0px 25px;
+                    padding: 0px 2px;
+                    font-size: x-large;
+                    outline: none;
+                }
+        }
+}
+.information{
+    width: 360px;
+}
+.shipping-form{
+    /*параметры формы*/
+        &-fld{
+            border: none;
+                &-lgd{
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #222222;
+                }
+                &-input{
+                    width: 360px;
+                    height: 45px;
+                    margin: 10px 0px;
+                    outline: none;
+                    padding-left: 10px;
+                    font-size: 20px;
+                    border: 1px solid #A4A4A4;
+                }
+        }
+        
+}
+.form-knopka{ /*это кнопака*/
+
+        &-button{
+            width: 100px;
+            height: 35px;
+            background-color: white;
+            outline: none;
+            border: 1px solid #A4A4A4;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 13px;
+            color: #4A4A4A;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background-color: #A4A4A4;
+                color: white;
+            }
+        }
+}
+.check{
+    background-color: #F5F3F3;
+    margin-top: 57px;
+        &-price{
+            color: $textColor;
+        }
+        &-small{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 13px;
+            color: #4A4A4A;
+            text-align: end;
+            padding: 39px 34px 12px 0px;
+        }
+        &-large{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;
+            text-align: end;
+            padding: 0px 37px 21px 0px;
+        }
+        &-hr{
+            width: 273px;
+            margin-left: 44px;
+            border: 1px solid #ccc;
+        }
+}
+.form-knob{
+
+        &-btn{
+            background-color: $textColor;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            padding: 15px 35px 16px 35px;
+            margin: 17px 0px 42px 44px;
+            width: 273px;
+            transition: 0.3s;
+            &:hover{
+                background-color: white;
+                color: $textColor;
+            }
+        }
+}
+.knob{
+    display: flex;
+    flex-wrap: wrap;
+        &-clear{
+
+                &-btn{
+                    margin-right: 192px;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #000000;
+                    border: 1px solid #A4A4A4;
+                    outline: none;
+                    cursor: pointer;
+                    background-color: white;
+                    padding: 17px 30px 16px 30px;
+                    width: 235px;
+                    height: 50px;
+                    transition: 0.3s;
+                    &:hover{
+                        background-color: black;
+                        color: white;
+                    }
+                }
+        }
+        &-continue{
+
+                &-btn{
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #000000;
+                    border: 1px solid #A4A4A4;
+                    outline: none;
+                    cursor: pointer;
+                    background-color: white;
+                    padding: 17px 30px 16px 30px;
+                    width: 235px;
+                    height: 50px;
+                    transition: 0.3s;
+                    &:hover{
+                        background-color: black;
+                        color: white;
+                    }
+                }
+        }
+}
+/*------subscribe-----*/ 
+.subscribe{
+    margin-top: 128px;
+    background-image: url(../../img/frame-shadows.jpg);
+    background-size: cover;
+    
+    
+}
+.container-subscribe{
+    @include container();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.review{
+    
+        &-img{
+            padding: 96px 142px 31px 122px;
+        }
+        &-text{
+            width: 325px;
+            height: 225px;
+            text-align: center;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+        }
+}
+.mailing{
+
+        &-head{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            
+            text-align: center;
+            color: #222224;
+                &-span{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    
+                    text-align: center;
+                    color: #222224;
+                }
+        }
+}
+.mailing-form{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+        &-email{
+            border: none;
+            background: #E1E1E1;
+            padding: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            outline: none;
+            width: 250px;
+        }
+        &-btn{
+            border: none;
+            background-color: #F16D7F;
+            color: #fff;
+            padding: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            cursor: pointer;
+            outline: none;
+            transition: 0.5s;
+            &:hover{
+                background-color: red;
+            }
+        }
+}
+/*-----footer----*/ 
+.footer{
+    background-color: #222224;
+    padding: 24px 0px;
+}
+.container-footer{
+    @include container();
+    display: flex;
+    justify-content: space-between;
+}
+.container-footer-copy{
+
+        &-parag{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            /* line-height: 0px; */
+            color: #FBFBFB;
+        }
+}
+.container-footer-social{
+
+        &-lk{
+            text-decoration: none;
+
+                &-icon{
+                    width: 32px;
+                    height: 32px;
+                    background-color: white;
+                    color: black;
+                    padding: 8px;
+                    font-size: 18px;
+                    text-align: center;
+                    transition: 0.4s;
+                    &:hover{
+                        background-color: #F16D7F;
+                        color: white;
+                    }
+                }
+        }
+}

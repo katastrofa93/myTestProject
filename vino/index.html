@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/db0a54d71a.js" crossorigin="anonymous"></script>
+<!--    <script src="script.js"></script>-->
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+            <button class="left" onclick="left()"><i class="fas fa-caret-square-left left-i"></i></button>
+            <button class="right" onclick="right()"><i class="fas fa-caret-square-right left-i"></i></button>
+        <div class="header-container">
+            <section class="address">
+                <p class="address-street">Новокузнечный переулок 4/1</p>
+                <p class="address-phone">8 (812) 123-45-67</p>
+            </section>
+            <nav class="navigation">
+                <ul class="navigation-ul">
+                    <li class="navigation-ul-li"> <a href="#" class="navigation-ul-li-lk">Каталог</a> </li>
+                    <li class="navigation-ul-li"> <a href="#" class="navigation-ul-li-lk">Доставка</a> </li>
+                    <li class="navigation-ul-li"> <a href="#" class="navigation-ul-li-lk">Коллекции</a> </li>
+                    <li class="navigation-ul-li"> <a href="#" class="navigation-ul-li-lk">Контакты</a> </li>
+                </ul>
+            </nav>
+            
+            <section class="knob">
+                <a href="#" class="knob-map">Винная карта</a>
+                <a href="#" class="knob-map">Дигустация</a>
+            </section>
+        </div>
+    </header>
+    <section class="text">
+        <div class="text-container">
+            <section class="description">
+                <h2 class="description-head">Лучший вкус, это вкус долголетнего вина</h2>
+                <hr class="description-hr">
+                <p class="description-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Feugiat enim tortor in hac id imperdiet adipiscing. 
+                    Pellentesque nisi, mi sit non sit sed fermentum. Felis adipiscing morbi 
+                    sodales ac. Mauris dictumst risus pulvinar blandit elit. Vestibulum quam 
+                    ultrices nascetur et viverra suscipit. Proin vitae aliquet leo aliquam amet 
+                    rutrum. Lectus auctor purus ultrices enim ultrices. Augue fringilla tellus 
+                    tortor orci ultrices sed. Viverra cras sapien, pellentesque viverra malesuada. 
+                    Tellus dolor, eget vitae dignissim molestie eget sit duis. Vitae dui vel 
+                    pretium euismod diam. Pellentesque amet, lacus, amet, quis risus. 
+                    Pellentesque scelerisque nunc, orci aliquam quis.
+                </p>
+                <img src="img/bokal-svg.svg" alt="bokal" class="description-img">
+            </section>
+        </div>
+    </section>
+    <section class="novelty">
+        <div class="novelty-container">
+            <hr class="novelty-horizon">
+            <div class="column">
+                <section class="specification">
+                    <h2 class="specification-head">Новинки коллекций</h2>
+                    <h3 class="specification-headName">Март 1980 <br> Урожай Марселя</h3>
+                    <hr class="specification-hr">
+                    <p class="specification-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Feugiat enim tortor in hac id imperdiet adipiscing. 
+                        Pellentesque nisi, mi sit non sit sed fermentum. 
+                        Felis adipiscing morbi sodales ac. 
+                    </p>
+                    <table class="table">
+                        <tr class="table-tr">
+                            <td class="table-td"> <p class="table-td-p">1980</p> </td>
+                            <td class="table-td"><h4 class="table-td-h">Colli Euganei Bianco Ca' Lustra 1980</h4>
+                                <p class="table-td-p">Красочная бутылка вина из Марселя</p>
+                            </td>
+                        </tr>
+                        <tr class="table-tr">
+                            <td class="table-td"><p class="table-td-p">1980</p></td>
+                            <td class="table-td"><h4 class="table-td-h">Colli Euganei Bianco Ca' Lustra 1980</h4>
+                                <p class="table-td-p">Красочная бутылка вина из Марселя</p>
+                            </td>
+                        </tr>
+                        <tr class="table-tr">
+                            <td class="table-td"><p class="table-td-p">1980</p></td>
+                            <td class="table-td"><h4 class="table-td-h">Colli Euganei Bianco Ca' Lustra 1980</h4>
+                                <p class="table-td-p">Красочная бутылка вина из Марселя</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="specification-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Feugiat enim tortor in hac id imperdiet adipiscing. 
+                        Pellentesque nisi, mi sit non sit sed fermentum. 
+                        Felis adipiscing morbi sodales ac. 
+                    </p>
+                    <a href="#" class="detail">узнать подробнее</a>
+                    
+                </section>
+                <section class="image">
+                    <img src="img/vino1.jpg" alt="vino1" class="image-img" id="imgOne" onclick="imgOne(this.id)">
+                    <img src="img/vino2.jpg" alt="vino2" class="image" id="imgTwo" onclick="imgTwo(this.id)">
+                    <img src="img/vino3.jpg" alt="vino3" class="image" id="imgThree" onclick="imgThree(this.id)">
+                </section>
+            </div>
+            <hr class="novelty-horizon-down">
+        </div>
+    </section>
+    <section class="entry">
+        <div class="entry-container">
+            <img src="img/grape.jpg" alt="grape" class="entry-container-grape">
+            <img src="img/barrel.jpg" alt="barrel" class="entry-container-barrel">
+            <h2 class="entry-container-OnDisgustation">Запись на дегустацию</h2>
+                <section class="entry-input">
+                    <hr class="entry-input-hr">
+                    <p class="entry-input-text">Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. Feugiat enim tortor 
+                        in hac id imperdiet adipiscing. Pellentesque nisi, 
+                        mi sit non sit sed fermentum. 
+                    </p>
+                    <form action="" class="input">
+                        <input type="text" placeholder="Имя" class="input-name">
+                        <input type="text" placeholder="Телефон" class="input-phone">
+                        <input type="text" class="input-address" placeholder="адрес">
+                    </form>
+                    <button class="entry-btn">записаться</button>
+                </section>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="navFooter">
+                <ul class="ulFooter">
+                    <li class="ulFooter-li"><a href="#" class="ulFooter-li-lk">Главная</a></li>
+                    <li class="ulFooter-li"><a href="#" class="ulFooter-li-lk">Каталог</a></li>
+                    <li class="ulFooter-li"><a href="#" class="ulFooter-li-lk">Поставщики</a></li>
+                    <li class="ulFooter-li"><a href="#" class="ulFooter-li-lk">Коллекции</a></li>
+                    <li class="ulFooter-li"><a href="#" class="ulFooter-li-lk">Дегустация</a></li>
+                    <li class="ulFooter-li"><a href="#" class="ulFooter-li-lk">Коллекция 2020</a></li>
+                    <li class="ulFooter-li"><a href="#" class="ulFooter-li-lk">Контакты</a></li>
+                </ul>
+                <ul class="ulSocial">
+                    <li class="ulSocial-li"><a href="#" class="ulSocial-li-lk">винный бутик LE CORTE</a></li>
+                    <li class="ulSocial-li"><a href="#" class="ulSocial-li-lk">8 (812) 123-45-67</a></li>
+                    <li class="ulSocial-li flex-li">
+                        <a href="#" class="ulSocial-li-lk"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="ulSocial-li-lk"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="ulSocial-li-lk"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="ulSocial-li"><a href="#" class="ulSocial-li-lk">&copy; le-corte.ru</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    
+    <script>
+    
+    
+        let header = document.querySelector(".header");
+        let buttonLeft = document.querySelector(".left");
+        let buttonRight = document.querySelector(".right");
+        let count = 0;
+        let myBackground = ["URL(img/header.jpg)", "URL(img/headeTwo.jpg)", "URL(img/headeOne.jpg)"];
+        
+        function left(){
+            (count == 2) ? count = 0 : count++;
+            header.style.backgroundImage = myBackground[count]; 
+        }
+        function right(){
+            (count == 0) ? count = 2 : count--;
+            header.style.backgroundImage = myBackground[count]; 
+        }
+    
+    
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/db0a54d71a.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cart_style/cart.css">
+    <title>Cart</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container-header">
+            <nav class="container-header-nav">
+                <div class="container-header-nav-brand">
+                    <a href="index.html" class="container-header-nav-brand-lk"><img src="img/logo.png" alt="the brand" class="navBrand-logo"></a>
+                    <a href="#" class="container-header-nav-brand-lk"><img src="img/search-svg.svg" alt="search" class="navBrand-search"></a>
+                </div>
+                <div class="container-header-nav-brand">   
+                    <input type="checkbox" id="menu">
+                    <label for="menu" class="container-header-nav-brand-btn-burg"><img class="burg-open" src="img/burger-svg.svg" alt="burger"></label>   
+                <!--<button class="container-header-nav-brand-btn-burg"><img class="burg-open" src="img/burger-svg.svg" alt="burger"></button>-->    
+                        <div class="overlay overlay-open">
+                            <nav class="overlay-nav">
+                                <label for="menu" class="overlay-nav-btn"><i class="fas fa-times overlay-nav-btn-close"></i></label> 
+                            <!--<button class="overlay-nav-btn"><i class="fas fa-times overlay-nav-btn-close"></i></button>-->
+                                <p class="overlay-nav-menu">MENU</p>
+                                <p class="overlay-nav-gen">MAN</p>
+                                    <ul class="overlay-nav-ul">
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Accessories</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Bags</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Denim</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">T-Shirts</li></a> 
+                                    </ul>
+                                <p class="overlay-nav-gen">WOOMAN</p>
+                                    <ul class="overlay-nav-ul">
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Accessories</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Jackets & Coats</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Polos</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">T-Shirts</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Shirts</li></a>
+                                    </ul>
+                                <p class="overlay-nav-gen">KIDS</p>
+                                    <ul class="overlay-nav-ul">
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Accessories</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Jackets & Coats</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Polos</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">T-Shirts</li></a> 
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Shirts</li></a>
+                                        <a href="#" class="overlay-nav-ul-lk"><li class="overlay-nav-ul-lk-li">Bags</li></a>
+                                    </ul>
+                            </nav>
+                        </div>
+                    <a href="registration.html" class="container-header-nav-brand-lk"><img src="img/account-svg.svg" alt="account" class="navOther-account"></a>
+                    <a href="#" class="container-header-nav-brand-lk"><img src="img/basket-svg.svg" alt="account" class="navOther-basket"></a>
+                </div>
+            </nav>    
+        </div>
+    </header>
+    <section class="promo">
+        <div class="promo-container">
+            <h1 class="promo-container-head">SHOPPING CART</h1>
+            <div class="promo-walk">
+                <!--<a href="#" class="promo-walk-link"> HOME / </a>
+                <a href="#" class="promo-walk-link"> MEN / </a>
+                <a href="#" class="promo-walk-link"> NEW ARRIVALS</a>-->
+            </div>
+        </div>
+    </section>
+    <section class="item">
+        <div class="item-container">
+            <section class="cart">
+
+                <div id="cart-goods" class="cart-goods">
+                    <img src="img/cartC.png" alt="" class="cart-goods-img">
+                    <article class="info">
+                        <h3 class="info-head">MANGO  PEOPLE <br> T-SHIRT</h3> 
+                        <p class="info-text">Price: $300</p> 
+                        <p class="info-text">Color: Red</p> 
+                        <p class="info-text">Size: Xl	</p> 
+                        <form action="" class="info-form">
+                            <p class="info-text">Quantity:</p> 
+                            <input type="number" class="info-form-input" min="1" max="99">
+                        </form>
+                    </article>
+                    <button id="close" class="close"><i class="fas fa-times cart-goods-close"></i></button>
+                </div>
+
+                <div id="cart-goods1" class="cart-goods">
+                    <img src="img/cartD.png" alt="" class="cart-goods-img">
+                    <article class="info">
+                        <h3 class="info-head">MANGO  PEOPLE <br> T-SHIRT</h3> 
+                        <p class="info-text">Price: $300</p> 
+                        <p class="info-text">Color: Red</p> 
+                        <p class="info-text">Size: Xl	</p> 
+                        <form action="" class="info-form">
+                            <p class="info-text">Quantity:</p> 
+                            <input type="number" class="info-form-input" min="1" max="99">
+                        </form>
+                    </article>
+                    <button id="close1" class="close"><i class="fas fa-times cart-goods-close"></i></button>
+                </div>
+
+            </section>
+            <section class="information">
+                <section class="shipping">
+
+                    <form action="" class="shipping-form">
+                        <fieldset class="shipping-form-fld">
+                            <legend class="shipping-form-fld-lgd">SHIPPING ADRESS</legend>
+                            <input type="text" class="shipping-form-fld-input" placeholder="Your Region"> <br>
+                            <input type="text" class="shipping-form-fld-input" placeholder="Your City"> <br>
+                            <input type="text" class="shipping-form-fld-input" placeholder="Your Postcode"> <br>
+                            <form action="" class="form-knopka"> <!--Это кнопка-->
+                                <button class="form-knopka-button">GET A QUOTE</button>
+                            </form>
+                        </fieldset>
+                    </form>
+
+                </section>
+                <section class="check">
+                    <p class="check-small">SUB TOTAL    <span class="check-price">$900</span>     </p>
+                    <p class="check-large">GRAND TOTAL      <span class="check-price">$900</span>   </p>
+                    <hr class="check-hr">
+                    <form action="" class="form-knob"> <!--Это кнопка-->
+                        <button class="form-knob-btn">PROCEED TO CHECKOUT</button>
+                    </form>
+                </section>
+            </section>
+            <section class="knob">
+                
+                    <button class="knob-clear-btn" id = "knob-clear-btn">CLEAR SHOPPING CART</button>
+                
+                
+                    <button class="knob-continue-btn" id="knob-continue-btn">CONTINUE SHOPPING</button>
+                
+            </section>
+        </div>
+    </section>
+    <section class="subscribe">
+        <div class="container-subscribe">
+            <article class="review">
+                <img src="img/face.png" alt="frameFoto" class="review-img">
+                <p class="review-text">“Vestibulum 
+                    quis porttitor dui! Quisque 
+                   viverra nunc mi, a pulvinar purus condimentum“
+                </p>
+            </article>
+            <article class="mailing">
+                <h3 class="mailing-head">SUBSCRIBE <br>
+                    <span class="mailing-head-span">FOR OUR NEWLETTER AND PROMOTION</span>
+                </h3>
+                <form action="" class="mailing-form">
+                    <input type="email" placeholder="Your E-mail" class="mailing-form-email" required>
+                    <input type="submit" value="Subscribe" class="mailing-form-btn">
+
+                </form>
+            </article>
+        </div>    
+    </section>
+    <footer class="footer">
+        <div class="container-footer">
+            <section class="container-footer-copy">
+                <p class="container-footer-copy-parag">
+                    &copy; 2021  Brand  All Rights Reserved.
+                </p>
+            </section>
+            <section class="container-footer-social">
+                <a href="#" class="container-footer-social-lk" target="_blanck"><i class="fab fa-facebook-f container-footer-social-lk-icon"></i></a>
+                <a href="#" class="container-footer-social-lk"><i class="fab fa-instagram container-footer-social-lk-icon"></i></a>
+                <a href="#" class="container-footer-social-lk"><i class="fab fa-pinterest-p container-footer-social-lk-icon"></i></a>
+                <a href="#" class="container-footer-social-lk"><i class="fab fa-twitter container-footer-social-lk-icon"></i></a>
+            </section>
+        </div>
+    </footer>
+
+    
+<script>
+         document.getElementById("knob-clear-btn").onclick = function(){
+             document.getElementById("cart-goods").style.display = "none";
+             document.getElementById("cart-goods1").style.display = "none";
+        }
+    
+        document.getElementById("close").onclick = function(){
+            document.getElementById("cart-goods").style.display = "none";
+        }
+        document.getElementById("close1").onclick = function(){
+            document.getElementById("cart-goods1").style.display = "none";
+        }
+    
+        
+    </script>
+
+</body>
+</html>
